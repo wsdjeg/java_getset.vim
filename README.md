@@ -86,29 +86,25 @@ used to customize the behavior of this script.
 ### Commands
 
 `:InsertGetterSetter`
-
-      Inserts a getter/setter for the property on the current line, or 
-      the range of properties specified via a visual block or x,y range 
-      notation.  The user is prompted to determine what type of method 
-      to insert. 
+Inserts a getter/setter for the property on the current line, or 
+the range of properties specified via a visual block or x,y range 
+notation.  The user is prompted to determine what type of method 
+to insert. 
    
 `:InsertGetterOnly`
-
-      Inserts a getter for the property on the current line, or the 
-      range of properties specified via a visual block or x,y range 
-      notation.  The user is not prompted. 
+Inserts a getter for the property on the current line, or the 
+range of properties specified via a visual block or x,y range 
+notation.  The user is not prompted. 
    
 `:InsertSetterOnly`
-
-      Inserts a setter for the property on the current line, or the 
-      range of properties specified via a visual block or x,y range 
-      notation.  The user is not prompted. 
+Inserts a setter for the property on the current line, or the 
+range of properties specified via a visual block or x,y range 
+notation.  The user is not prompted. 
    
 `:InsertBothGetterSetter`
-
-      Inserts a getter and setter for the property on the current line, 
-      or the range of properties specified via a visual block or x,y 
-      range notation.  The user is not prompted. 
+Inserts a getter and setter for the property on the current line, 
+or the range of properties specified via a visual block or x,y 
+range notation.  The user is not prompted. 
 
 ### Mappings
 
@@ -118,28 +114,24 @@ key mappings use the `<LocalLeader>` which is the backslash key by
 default ''.  This can also be configured via a variable (see below). 
    
 `<LocalLeader>p` (or `<Plug>JavagetsetInsertGetterSetter`) 
-
-      Inserts a getter/setter for the property on the current line, or 
-      the range of properties specified via a visual block.  User is 
-      prompted for choice. 
+Inserts a getter/setter for the property on the current line, or 
+the range of properties specified via a visual block.  User is 
+prompted for choice. 
    
 `<LocalLeader>g` (or `<Plug>JavagetsetInsertGetterOnly`)
-
-      Inserts a getter for the property on the current line, or the 
-      range of properties specified via a visual block.  User is not 
-      prompted. 
+Inserts a getter for the property on the current line, or the 
+range of properties specified via a visual block.  User is not 
+prompted. 
    
 `<LocalLeader>s` (or `<Plug>JavagetsetInsertSetterOnly`)
-
-      Inserts a getter for the property on the current line, or the 
-      range of properties specified via a visual block.  User is not 
-      prompted. 
+Inserts a getter for the property on the current line, or the 
+range of properties specified via a visual block.  User is not 
+prompted. 
    
 `<LocalLeader>b` (or `<Plug>JavagetsetInsertBothGetterSetter`) 
-
-      Inserts both a getter and setter for the property on the current 
-      line, or the range of properties specified via a visual block. 
-      User is not prompted. 
+Inserts both a getter and setter for the property on the current 
+line, or the range of properties specified via a visual block. 
+User is not prompted. 
    
 If you want to define your own mapping, you can map whatever you want 
 to `<Plug>JavagetsetInsertGetterSetter` (or any of the other `<Plug>`s 
@@ -159,31 +151,27 @@ script so that you do not need to make changes directly to the script.
 These variables can be set in your vimrc. 
    
 `no_plugin_maps` 
-
-    Setting this variable will disable all key mappings defined by any 
-    of your plugins (if the plugin writer adhered to the standard 
-    convention documented in the scripting section of the VIM manual) 
-    including this one. 
+Setting this variable will disable all key mappings defined by any 
+of your plugins (if the plugin writer adhered to the standard 
+convention documented in the scripting section of the VIM manual) 
+including this one. 
    
 `no_java_maps`
-
-    Setting this variable will disable all key mappings defined by any 
-    java specific plugin including this one. 
+Setting this variable will disable all key mappings defined by any 
+java specific plugin including this one. 
    
 `maplocalleader`
-
-    By default, the key mappings defined by this script use 
-    `<LocalLeader>` which is the backslash character by default.  You can 
-    change this by setting this variable to a different key.  For 
-    example, if you want to use the comma-key, you can add this line to 
-    your vimrc: 
+By default, the key mappings defined by this script use 
+`<LocalLeader>` which is the backslash character by default.  You can 
+change this by setting this variable to a different key.  For 
+example, if you want to use the comma-key, you can add this line to 
+your vimrc: 
 
 ```         
         let maplocalleader = ',' 
 ```
    
 `b:javagetset_insertPosition`
-
 This variable determines the location where the getter and/or setter 
 will be inserted.  Currently, three positions have been defined: 
 
@@ -193,11 +181,10 @@ will be inserted.  Currently, three positions have been defined:
         2 - insert after the current line / block 
 ```
 
-`b:javagetset_getterTemplate`
-`b:javagetset_setterTemplate`
-`b:javagetset_getterArrayTemplate`
+`b:javagetset_getterTemplate`,
+`b:javagetset_setterTemplate`,
+`b:javagetset_getterArrayTemplate`,
 `b:javagetset_setterArrayTemplate`
-
 These variables determine the text that will be inserted for a getter,
 setter, array-based getter, and array-based setter respectively.  The
 templates may contain the following placeholders which will be

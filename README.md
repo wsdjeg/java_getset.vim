@@ -1,7 +1,10 @@
 java_getset.vim
 ===============
 
-Vim file type plugin for the creation of Java getters and setters.
+Vim file type plugin for the creation of Java getters and setters. 
+This code was written in 2002 and I've not programmed in Java for 
+about the same amount of time. However, I post the code here for 
+anyone interested.
 
 ## Description
 This filetype plugin enables a user to automatically add getter/setter 

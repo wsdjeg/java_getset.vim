@@ -767,7 +767,7 @@ endif
 " example shows in the documentation so I've stuck with that convention.
 " Ideally, I'd prefer to use only one noremap line and map the <Plug>
 " directly to the ':call <SID>function()<CR>'.
-if !exists("no_plugin_maps") && !exists("no_java_maps")
+if !exists("no_plugin_maps") && !exists("no_java_maps") && !exists('g:java_getset_disable_map')
   if !hasmapto('<Plug>JavagetsetInsertGetterSetter')
     map <unique> <buffer> <LocalLeader>p <Plug>JavagetsetInsertGetterSetter
   endif

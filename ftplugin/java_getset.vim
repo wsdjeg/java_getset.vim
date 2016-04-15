@@ -179,7 +179,7 @@
 "       
 "         let maplocalleader = ','
 "
-"   b:javagetset_insertPosition
+"   g:javagetset_insertPosition
 "     This variable determines the location where the getter and/or setter
 "     will be inserted.  Currently, three positions have been defined:
 "
@@ -187,10 +187,10 @@
 "         1 - insert before the current line / block
 "         2 - insert after the current line / block
 "
-"   b:javagetset_getterTemplate
-"   b:javagetset_setterTemplate
-"   b:javagetset_getterArrayTemplate
-"   b:javagetset_setterArrayTemplate
+"   g:javagetset_getterTemplate
+"   g:javagetset_setterTemplate
+"   g:javagetset_getterArrayTemplate
+"   g:javagetset_setterArrayTemplate
 "     These variables determine the text that will be inserted for a
 "     getter, setter, array-based getter, and array-based setter
 "     respectively.  The templates may contain the following placeholders
@@ -215,7 +215,7 @@
 "     This block of code can be produced by adding the following variable
 "     definition to your vimrc file.
 "
-"         let b:javagetset_getterTemplate = 
+"         let g:javagetset_getterTemplate = 
 "           \ "\n" .
 "           \ "/**\n" .
 "           \ " * Get %varname%.\n" .
@@ -270,8 +270,8 @@ set cpo&vim
 " below.
 "
 " Getter Templates (non-array and array-based)
-if exists("b:javagetset_getterTemplate")
-  let s:javagetset_getterTemplate = b:javagetset_getterTemplate
+if exists("g:javagetset_getterTemplate")
+  let s:javagetset_getterTemplate = g:javagetset_getterTemplate
 else  
   let s:javagetset_getterTemplate = 
     \ "\n" .
@@ -286,8 +286,8 @@ else
     \ "}"
 endif
 
-if exists("b:javagetset_getterArrayTemplate")
-  let s:javagetset_getterArrayTemplate = b:javagetset_getterArrayTemplate
+if exists("g:javagetset_getterArrayTemplate")
+  let s:javagetset_getterArrayTemplate = g:javagetset_getterArrayTemplate
 else  
   let s:javagetset_getterArrayTemplate =
     \ "\n" .
@@ -314,8 +314,8 @@ else
 endif
 
 " Setter Templates (non-array and array-based)
-if exists("b:javagetset_setterTemplate")
-  let s:javagetset_setterTemplate = b:javagetset_setterTemplate
+if exists("g:javagetset_setterTemplate")
+  let s:javagetset_setterTemplate = g:javagetset_setterTemplate
 else  
   let s:javagetset_setterTemplate = 
   \ "\n" .
@@ -330,8 +330,8 @@ else
   \ "}"
 endif
 
-if exists("b:javagetset_setterArrayTemplate")
-  let s:javagetset_setterArrayTemplate = b:javagetset_setterArrayTemplate
+if exists("g:javagetset_setterArrayTemplate")
+  let s:javagetset_setterArrayTemplate = g:javagetset_setterArrayTemplate
 else  
   let s:javagetset_setterArrayTemplate =
   \ "\n" .
@@ -361,8 +361,8 @@ endif
 "   0 - end of class 
 "   1 = above block / line
 "   2 = below block / line
-if exists("b:javagetset_insertPosition")
-  let s:javagetset_insertPosition = b:javagetset_insertPosition
+if exists("g:javagetset_insertPosition")
+  let s:javagetset_insertPosition = g:javagetset_insertPosition
 else  
   let s:javagetset_insertPosition = 0
 endif
@@ -726,7 +726,7 @@ if !exists("*s:InsertMethodBody")
 endif
 
 " Move the cursor to the insertion point.  This insertion point can be
-" defined by the user by setting the b:javagetset_insertPosition variable.  
+" defined by the user by setting the g:javagetset_insertPosition variable.  
 if !exists("*s:MoveToInsertPosition")
   function s:MoveToInsertPosition()
 
